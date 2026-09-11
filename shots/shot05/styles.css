@@ -1,0 +1,39 @@
+:root { color-scheme: light; --paper: #eee7d6; --charcoal: #292b29; --teal: #62b8ba; --coral: #d96749; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #2d2d2a; color: #f5f1e7; font-family: system-ui, sans-serif; }
+.review-shell { width: min(96vw, 1400px); margin: 2vh auto; }
+.animation-frame { overflow: hidden; width: 100%; aspect-ratio: 16 / 9; background: var(--paper); box-shadow: 0 12px 38px #0008; }
+#scene { display: block; width: 100%; height: 100%; }
+.paper { fill: var(--paper); }
+.paper-noise { filter: url(#paper-grain); opacity: .75; pointer-events: none; }
+.sketch-line, .hair, .hair-shade, .liquid-edge, .liquid-pencil, .draw-path { fill: none; stroke: var(--charcoal); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.substrate { stroke-width: 3; opacity: .72; }
+.hair { fill: #3b3d39; stroke-width: 4; }
+.hair-shade { stroke: #72736b; stroke-width: 5; opacity: .58; }
+.liquid-fill { fill: var(--teal); opacity: .9; }
+.liquid-edge { stroke: #277f83; stroke-width: 4; }
+.liquid-pencil { stroke: #d2eeee; stroke-width: 3; opacity: .45; }
+.draw-path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.accent-pencil { stroke: var(--coral); stroke-width: 5; }
+.cross { stroke: var(--coral); stroke-width: 8; }
+.sketch-text, .annotation-title, .annotation-cn { fill: var(--charcoal); font-family: "Comic Sans MS", "Bradley Hand", "Kaiti SC", cursive; }
+.sketch-text { font-size: 38px; }
+.annotation-title { font-size: 42px; letter-spacing: 1px; }
+.annotation-cn { font-size: 30px; }
+#tip-label, #gap-label, #gap-cn, #bridge-label, #bridge-cn { opacity: 0; }
+#subtitle { display: flex; align-items: center; justify-content: center; min-height: 80px; padding: 10px 28px; color: #222; font-family: "Noto Sans SC", system-ui, sans-serif; font-size: 31px; font-weight: 550; text-align: center; letter-spacing: .02em; text-shadow: 0 1px #fff8; }
+#debug-guides { display: none; fill: none; stroke: #b34f73; stroke-width: 2; stroke-dasharray: 10 10; opacity: .45; }
+#debug-guides.visible { display: block; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 16px 4px; }
+.button-row { display: flex; align-items: center; gap: 8px; }
+button { border: 1px solid #888; border-radius: 5px; padding: 7px 15px; background: #eee9df; color: #292929; cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 3px solid #79c5c7; outline-offset: 2px; }
+#time-display { min-width: 110px; margin-left: 8px; font-variant-numeric: tabular-nums; }
+#scrubber { flex: 1 1 360px; accent-color: var(--teal); }
+.controls label { white-space: nowrap; }
+@media (max-aspect-ratio: 3 / 4) {
+  .review-shell { width: min(96vw, 680px); }
+  .animation-frame { aspect-ratio: 9 / 16; }
+  #subtitle { font-size: 27px; padding-inline: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { button, input { scroll-behavior: auto; } }
