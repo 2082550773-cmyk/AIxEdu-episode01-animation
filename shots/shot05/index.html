@@ -1,77 +1,63 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI × Edu — Shot 05</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI × Edu — Shot 05 + Shot 06</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="review-shell">
-    <section id="animation-frame" class="animation-frame" aria-label="Shot 05 animation">
-      <svg id="scene" viewBox="0 0 1600 900" role="img" aria-labelledby="scene-title scene-desc">
-        <title id="scene-title">Two tapered hairs holding confined liquid</title>
-        <desc id="scene-desc">A continuous researcher sketch showing attention shift from tip size to the gap and confined liquid.</desc>
-        <defs>
-          <filter id="paper-grain" x="0" y="0" width="100%" height="100%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="19" result="noise"/>
-            <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
-            <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 0.055"/></feComponentTransfer>
-          </filter>
-          <clipPath id="liquid-reveal"><rect id="liquid-clip" x="90" y="176" width="120" height="0"/></clipPath>
-        </defs>
-        <rect class="paper" width="1600" height="900"/>
-        <rect class="paper-noise" width="1600" height="900"/>
-        <g id="debug-guides" aria-hidden="true"><path d="M800 0V900M0 450H1600"/><rect x="80" y="60" width="1440" height="760"/></g>
+<main class="review-shell">
+  <section id="animation-frame" class="animation-frame" aria-label="Shot 05 and Shot 06 animatic">
+    <svg id="scene" viewBox="0 0 1600 900" role="img" aria-labelledby="scene-title scene-desc">
+      <title id="scene-title">From tip size to a two-hair liquid-transfer representation</title>
+      <desc id="scene-desc">A continuous hand-drawn animatic in which attention moves from one tip to the region and confined liquid between two tapered hairs.</desc>
+      <defs>
+        <filter id="paper-grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="19"/><feComponentTransfer><feFuncA type="table" tableValues="0 .035"/></feComponentTransfer></filter>
+        <clipPath id="liquid-reveal"><rect id="liquid-clip" x="-10" y="100" width="220" height="0"/></clipPath>
+      </defs>
+      <rect id="paper-background" width="1600" height="900"/><rect class="paper-noise" width="1600" height="900"/>
+      <g id="debug-guides" aria-hidden="true"><rect x="70" y="55" width="1460" height="735"/><path d="M800 0v900M0 450h1600"/></g>
 
-        <g id="main-diagram">
-          <path class="substrate sketch-line" d="M-190 655 C40 651 280 657 500 653"/>
-          <g id="liquid" clip-path="url(#liquid-reveal)">
-            <path class="liquid-fill" d="M99 176 C119 215 178 215 201 176 L210 528 L90 528 Z"/>
-            <path class="liquid-edge" d="M99 176 C119 215 178 215 201 176"/>
-            <path class="liquid-pencil" d="M112 262l25-18m-14 93l35-26m-31 105l38-28m-47 96l30-22"/>
+      <g id="new-representation-group">
+        <path id="new-frame" class="draw-path frame" pathLength="1" d="M-175 5 C-30-7 355 4 493 0 C501 145 494 520 500 674 C322 683-9 675-180 681 C-187 488-177 184-175 5Z"/>
+        <text id="new-title" class="title" x="-145" y="54">NEW REPRESENTATION</text>
+        <text id="new-title-cn" class="cn" x="-142" y="88">新的问题表征</text>
+        <text id="new-question" class="question" x="-142" y="624">怎样利用两根毛之间的结构去控制液体？</text>
+        <g id="shot05-structure">
+          <path id="substrate" class="draw-path ink thin" pathLength="1" d="M-95 540 C12 536 215 543 330 539"/>
+          <path id="written-line" class="draw-path accent-stroke written" pathLength="1" d="M102 538 C145 535 193 540 245 537"/>
+          <g id="confined-liquid" clip-path="url(#liquid-reveal)">
+            <path class="liquid-fill" d="M77 112 C99 129 123 129 145 112 C143 245 135 397 113 516 C103 528 94 528 84 516 C70 394 70 244 77 112Z"/>
+            <path id="liquid-contour" class="accent-stroke" d="M77 112 C99 129 123 129 145 112 C143 245 135 397 113 516 C103 528 94 528 84 516 C70 394 70 244 77 112Z"/>
           </g>
-          <path class="hair" d="M88 528 C60 443 65 294 96 72 C123 202 146 360 129 491 C124 526 110 546 88 528 Z"/>
-          <path class="hair-shade" d="M92 505 C80 400 85 252 97 104 C111 250 122 397 112 504"/>
-          <path class="hair" d="M212 528 C190 546 176 526 171 491 C154 360 177 202 204 72 C235 294 240 443 212 528 Z"/>
-          <path class="hair-shade" d="M188 504 C178 397 189 250 203 104 C215 252 220 400 208 505"/>
-          <path id="attention-circle" class="draw-path accent-pencil" pathLength="1" d="M151 92 C103 91 79 179 82 306 C85 444 111 564 153 558 C195 550 218 438 215 302 C211 170 197 90 151 92 Z"/>
-          <path id="gap-bracket" class="draw-path sketch-line" pathLength="1" d="M130 265 v-28 h40 v28 M150 237 v-18 M170 237 h106"/>
+          <path id="liquid-contact" class="draw-path accent-stroke" pathLength="1" d="M101 507 C103 520 104 531 104 538"/>
+          <path id="hair-left" class="hair" d="M65 515 C39 435 43 268 74 58 C93 170 111 345 100 463 C96 508 83 534 65 515Z"/>
+          <path class="hair-detail" d="M70 493 C59 383 63 222 75 87"/>
+          <path id="hair-right" class="hair" d="M151 515 C133 534 120 508 116 463 C105 345 123 170 142 58 C173 268 177 435 151 515Z"/>
+          <path class="hair-detail" d="M146 493 C157 383 153 222 141 87"/>
+          <path id="old-tip-circle" class="draw-path ink" pathLength="1" d="M40 470 C49 434 93 430 110 463 C119 496 97 528 65 525 C39 523 30 497 40 470Z"/>
+          <g id="tip-size-label"><text class="label" x="-145" y="424">TIP SIZE</text><text class="cn" x="-142" y="456">尖端尺寸</text></g>
+          <path id="tip-size-cross" class="draw-path accent-stroke cross" pathLength="1" d="M-153 382 L18 458 M8 382 L-149 461"/>
+          <path id="new-gap-circle" class="draw-path accent-stroke circle" pathLength="1" d="M110 91 C56 93 49 211 53 335 C56 470 74 525 106 528 C140 527 160 461 163 329 C166 198 158 90 110 91Z"/>
+          <g id="gap-label-group"><path id="gap-pointer" class="draw-path ink thin" pathLength="1" d="M263 251 C230 254 199 268 158 293"/><text id="gap-label" class="label" x="280" y="244">GAP</text><text id="gap-label-cn" class="cn" x="282" y="278">间隙</text></g>
+          <g id="liquid-label-group"><path id="liquid-pointer" class="draw-path ink thin" pathLength="1" d="M305 397 C247 397 193 385 137 365"/><text id="liquid-bridge-label" class="label" x="322" y="391">LIQUID BRIDGE</text><text id="liquid-bridge-label-cn" class="cn" x="325" y="426">液桥</text></g>
+          <text id="liquid-transfer-label" class="small-label" x="150" y="575">CONTROLLABLE LIQUID TRANSFER</text>
         </g>
+      </g>
 
-        <g id="tip-diagram" class="annotation-group">
-          <path id="tip-lines" class="draw-path sketch-line" pathLength="1" d="M32 260 L92 36 L145 260 Z M18 270h140 M25 10v42 M151 10v42 M25 25h126 m-126 0l13-8m-13 8l13 8m113-8l-13-8m13 8l-13 8"/>
-          <text id="tip-label" class="sketch-text" x="176" y="35">tip size</text>
-          <path id="cross-one" class="draw-path cross" pathLength="1" d="M8 44 C59 91 105 140 163 205"/>
-          <path id="cross-two" class="draw-path cross" pathLength="1" d="M161 49 C113 92 65 146 16 211"/>
-        </g>
-
-        <g id="gap-annotation" class="annotation-group">
-          <text id="gap-label" class="annotation-title" x="0" y="0">GAP</text>
-          <text id="gap-cn" class="annotation-cn" x="3" y="42">间隙</text>
-        </g>
-        <g id="bridge-annotation" class="annotation-group">
-          <path id="bridge-pointer" class="draw-path sketch-line" pathLength="1" d="M0 0 L-65 9 L-170 -30"/>
-          <text id="bridge-label" class="annotation-title" x="22" y="12">LIQUID BRIDGE</text>
-          <text id="bridge-cn" class="annotation-cn" x="25" y="54">液桥</text>
-        </g>
-        <foreignObject id="subtitle-layer" x="180" y="765" width="1240" height="80">
-          <div id="subtitle" xmlns="http://www.w3.org/1999/xhtml"></div>
-        </foreignObject>
-      </svg>
-    </section>
-
-    <section class="controls" aria-label="Development controls">
-      <div class="button-row">
-        <button id="play" type="button">Play</button><button id="pause" type="button">Pause</button><button id="restart" type="button">Restart</button>
-        <output id="time-display">0:00 / 0:15</output>
-      </div>
-      <input id="scrubber" type="range" min="0" max="15" step="0.01" value="0" aria-label="Local shot time">
-      <label><input id="subtitle-toggle" type="checkbox" checked> Subtitles</label>
-      <label><input id="debug-toggle" type="checkbox"> Debug guides</label>
-    </section>
-  </main>
-  <script src="config.js"></script>
-  <script src="timeline.js"></script>
-</body>
-</html>
+      <g id="old-representation-group">
+        <path id="old-frame" class="draw-path frame" pathLength="1" d="M4 2 C154-5 440 7 578 1 C585 148 577 454 582 603 C411 611 164 602 0 608 C-8 420 2 169 4 2Z"/>
+        <path id="old-frame-cross" class="draw-path accent-stroke cross" pathLength="1" d="M-14 -13 L595 620 M592 -9 L-13 620"/>
+        <text id="old-kicker" class="small-label" x="28" y="55">OLD</text>
+        <text id="old-title" class="title" x="28" y="102">OLD REPRESENTATION</text><text class="cn old-copy" x="30" y="138">原来的问题表征</text>
+        <path id="old-single-tip" class="draw-path old-tip" pathLength="1" d="M116 362 C104 300 110 222 138 167 C166 231 167 307 153 362Z"/>
+        <path id="old-arrow" class="draw-path ink thin" pathLength="1" d="M211 275 H331 M331 275 l-22-15 M331 275 l-22 15"/>
+        <path id="old-thinner-tip" class="draw-path old-tip" pathLength="1" d="M397 362 C391 297 402 222 417 167 C434 229 438 302 428 362Z"/>
+        <text id="old-question" class="question" x="90" y="490">怎样做一个更细的 tip？</text>
+      </g>
+      <text id="final-statement" x="800" y="755">这不是同一道题的更好答案。</text>
+      <foreignObject id="subtitle-layer" x="180" y="788" width="1240" height="72"><div id="subtitle" xmlns="http://www.w3.org/1999/xhtml"></div></foreignObject>
+    </svg>
+  </section>
+  <section class="controls" aria-label="Development controls"><div class="button-row"><button id="play">Play</button><button id="pause">Pause</button><button id="restart">Restart</button><output id="time-display">0:00 / 0:25</output></div><input id="scrubber" type="range" min="0" max="25" step=".01" value="0" aria-label="Local sequence time"><label><input id="subtitle-toggle" type="checkbox" checked> Subtitles</label><label><input id="debug-toggle" type="checkbox"> Guides</label></section>
+</main><script src="config.js"></script><script src="timeline.js"></script>
+</body></html>
