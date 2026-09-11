@@ -32,7 +32,7 @@ window.SHOT05_CONFIG = Object.freeze({
   }),
   LAYOUT: Object.freeze({
     landscape: Object.freeze({
-      hairGroup: { x: 650, y: 124 }, gapWidth: 112,
+      hairGroup: { x: 616, y: 82, scale: 1.12 }, gapWidth: 112,
       hairGeometry: { width: 150, height: 530, taper: 52 },
       liquidGeometry: { top: 176, bottom: 528, meniscusDepth: 35 },
       circle: { x: 150, y: 325, width: 160, height: 470 },
@@ -42,7 +42,7 @@ window.SHOT05_CONFIG = Object.freeze({
       subtitle: { x: 800, y: 825 }
     }),
     portrait: Object.freeze({
-      hairGroup: { x: 310, y: 180 }, gapWidth: 112,
+      hairGroup: { x: 282, y: 148, scale: 1.12 }, gapWidth: 112,
       hairGeometry: { width: 150, height: 530, taper: 52 },
       liquidGeometry: { top: 176, bottom: 528, meniscusDepth: 35 },
       circle: { x: 150, y: 325, width: 160, height: 470 },
