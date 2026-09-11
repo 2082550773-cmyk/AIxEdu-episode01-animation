@@ -8,7 +8,7 @@ body { margin: 0; min-height: 100vh; background: #2d2d2a; color: #f5f1e7; font-f
 .paper-noise { filter: url(#paper-grain); opacity: .75; pointer-events: none; }
 .sketch-line, .hair, .hair-shade, .liquid-edge, .liquid-pencil, .draw-path { fill: none; stroke: var(--charcoal); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .substrate { stroke-width: 3; opacity: .72; }
-.hair { fill: #676960; fill-opacity: .68; stroke-width: 4; }
+.hair { fill: #676960; fill-opacity: .34; stroke-width: 4; }
 .hair-shade { stroke: #e0dacb; stroke-width: 4; opacity: .48; }
 .liquid-fill { fill: var(--teal); opacity: .9; }
 .liquid-edge { stroke: #277f83; stroke-width: 4; }
