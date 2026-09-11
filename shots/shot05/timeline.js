@@ -19,7 +19,10 @@
   const smooth = (value) => value * value * (3 - 2 * value);
   const draw = (element, value) => { element.style.strokeDashoffset = String(1 - clamp(value)); };
   const fadeIn = (element, value) => { element.style.opacity = String(clamp(value)); };
-  const transform = (element, point) => element.setAttribute("transform", `translate(${point.x} ${point.y})`);
+  const transform = (element, point) => {
+    const scale = point.scale ? ` scale(${point.scale})` : "";
+    element.setAttribute("transform", `translate(${point.x} ${point.y})${scale}`);
+  };
 
   function applyLayout() {
     portrait = matchMedia("(max-aspect-ratio: 3/4)").matches;

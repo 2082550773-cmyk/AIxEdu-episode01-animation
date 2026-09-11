@@ -8,13 +8,13 @@ body { margin: 0; min-height: 100vh; background: #2d2d2a; color: #f5f1e7; font-f
 .paper-noise { filter: url(#paper-grain); opacity: .75; pointer-events: none; }
 .sketch-line, .hair, .hair-shade, .liquid-edge, .liquid-pencil, .draw-path { fill: none; stroke: var(--charcoal); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .substrate { stroke-width: 3; opacity: .72; }
-.hair { fill: #676960; fill-opacity: .68; stroke-width: 4; }
-.hair-shade { stroke: #e0dacb; stroke-width: 4; opacity: .48; }
+.hair { fill: #77796f; fill-opacity: .22; stroke-width: 5; }
+.hair-shade { stroke: var(--charcoal); stroke-width: 2.25; opacity: .28; stroke-dasharray: 15 7 28 5; }
 .liquid-fill { fill: var(--teal); opacity: .9; }
 .liquid-edge { stroke: #277f83; stroke-width: 4; }
 .liquid-pencil { stroke: #d2eeee; stroke-width: 3; opacity: .45; }
 .draw-path { stroke-dasharray: 1; stroke-dashoffset: 1; }
-.accent-pencil { stroke: var(--coral); stroke-width: 5; }
+.accent-pencil { stroke: var(--coral); stroke-width: 5; stroke-dasharray: 1; }
 .cross { stroke: var(--coral); stroke-width: 8; }
 .sketch-text, .annotation-title, .annotation-cn { fill: var(--charcoal); font-family: "Comic Sans MS", "Bradley Hand", "Kaiti SC", cursive; }
 .sketch-text { font-size: 38px; }
