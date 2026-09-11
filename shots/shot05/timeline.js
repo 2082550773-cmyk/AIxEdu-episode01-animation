@@ -30,7 +30,8 @@
     transform(elements.gapAnnotation, layout.gapAnnotation);
     transform(elements.bridgeAnnotation, layout.liquidBridgeAnnotation);
     const pointer = layout.liquidBridgeAnnotation.pointerEnd;
-    elements.bridgePointer.setAttribute("d", `M-30 0 L${pointer.x * 0.42} 9 L${pointer.x} ${pointer.y}`);
+    const pointerStartX = layout.liquidBridgeAnnotation.pointerStartX;
+    elements.bridgePointer.setAttribute("d", `M${pointerStartX} 0 L${pointer.x * 0.42} 9 L${pointer.x} ${pointer.y}`);
     const subtitleWidth = portrait ? 800 : 1240;
     elements.subtitleLayer.setAttribute("x", layout.subtitle.x - subtitleWidth / 2);
     elements.subtitleLayer.setAttribute("y", layout.subtitle.y - 45);

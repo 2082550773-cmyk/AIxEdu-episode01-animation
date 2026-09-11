@@ -32,23 +32,23 @@ window.SHOT05_CONFIG = Object.freeze({
   }),
   LAYOUT: Object.freeze({
     landscape: Object.freeze({
-      hairGroup: { x: 650, y: 124 }, gapWidth: 112,
+      hairGroup: { x: 650, y: 124 }, gapWidth: 124,
       hairGeometry: { width: 150, height: 530, taper: 52 },
       liquidGeometry: { top: 176, bottom: 528, meniscusDepth: 35 },
       circle: { x: 150, y: 325, width: 160, height: 470 },
       tipDiagram: { x: 1200, y: 270 },
-      gapAnnotation: { x: 1020, y: 282 },
-      liquidBridgeAnnotation: { x: 970, y: 532, pointerEnd: { x: -170, y: -30 } },
+      gapAnnotation: { x: 1060, y: 282 },
+      liquidBridgeAnnotation: { x: 940, y: 532, pointerStartX: -45, pointerEnd: { x: -140, y: -30 } },
       subtitle: { x: 800, y: 825 }
     }),
     portrait: Object.freeze({
-      hairGroup: { x: 310, y: 180 }, gapWidth: 112,
+      hairGroup: { x: 310, y: 180 }, gapWidth: 124,
       hairGeometry: { width: 150, height: 530, taper: 52 },
       liquidGeometry: { top: 176, bottom: 528, meniscusDepth: 35 },
       circle: { x: 150, y: 325, width: 160, height: 470 },
       tipDiagram: { x: 140, y: 850 },
-      gapAnnotation: { x: 575, y: 340 },
-      liquidBridgeAnnotation: { x: 540, y: 615, pointerEnd: { x: -80, y: -30 } },
+      gapAnnotation: { x: 625, y: 340 },
+      liquidBridgeAnnotation: { x: 520, y: 615, pointerStartX: -35, pointerEnd: { x: -60, y: -30 } },
       subtitle: { x: 450, y: 1480 }
     })
   }),
