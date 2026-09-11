@@ -29,6 +29,8 @@
     transform(elements.tip, layout.tipDiagram);
     transform(elements.gapAnnotation, layout.gapAnnotation);
     transform(elements.bridgeAnnotation, layout.liquidBridgeAnnotation);
+    const pointer = layout.liquidBridgeAnnotation.pointerEnd;
+    elements.bridgePointer.setAttribute("d", `M0 0 L${pointer.x * 0.42} 9 L${pointer.x} ${pointer.y}`);
     const subtitleWidth = portrait ? 800 : 1240;
     elements.subtitleLayer.setAttribute("x", layout.subtitle.x - subtitleWidth / 2);
     elements.subtitleLayer.setAttribute("y", layout.subtitle.y - 45);
@@ -43,7 +45,7 @@
     elements.liquidClip.setAttribute("height", String(352 * liquid));
 
     draw(elements.circle, progress(currentTime, T.attentionCircleStart, T.attentionCircleEnd));
-    const circleFade = 1 - progress(currentTime, T.gapBracketStart, T.gapBracketEnd);
+    const circleFade = 1 - progress(currentTime, T.gapBracketStart, T.attentionCircleFadeEnd);
     elements.circle.style.opacity = String(circleFade);
 
     const tipProgress = progress(currentTime, T.tipDiagramStart, T.tipDiagramEnd);
@@ -52,7 +54,7 @@
     draw(elements.crossOne, progress(currentTime, T.tipCrossStart, T.tipCrossStrokeChange));
     draw(elements.crossTwo, progress(currentTime, T.tipCrossStrokeChange, T.tipCrossEnd));
     const tipDemotion = progress(currentTime, T.emphasisReturnStart, T.emphasisReturnEnd);
-    elements.tip.style.opacity = String(1 - tipDemotion * 0.57);
+    elements.tip.style.opacity = String(1 - tipDemotion * 0.72);
 
     draw(elements.gapBracket, progress(currentTime, T.gapBracketStart, T.gapBracketEnd));
     const gapText = progress(currentTime, T.gapLabelStart, T.gapLabelEnd);
